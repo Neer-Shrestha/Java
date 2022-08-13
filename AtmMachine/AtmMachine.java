@@ -1,8 +1,11 @@
+import java.util.Scanner;
+
 public class AtmMachine {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         float balance = 1000;
         float depositeMoney = 100, withdrawMoney = 500;
-        int userChoice = 3;
+        int userChoice =  scanner.nextInt();
         System.out.println("1. Check Balance");
         System.out.println("2. Deposite Money");
         System.out.println("3. Withdraw Money");
@@ -21,5 +24,7 @@ public class AtmMachine {
             default:
                 System.out.println("You Input wrong choice.");
         }
+
+        scanner.close();
     }
 }
